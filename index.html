@@ -47,7 +47,7 @@
 					<section>
 						<h2>SoUse c'est quoi ?</h2>
 						<aside class="notes">
-							Chiffres clé : date de démarrage, grandes étapes (proto, MVP), etc...
+							Speaker notes...
 						</aside>
 					</section>
 					<section>Recherchez, Découvrez, Consommez autrement</section>
@@ -58,9 +58,35 @@
 
 				<section>
 					<section>
+						<h2>Timeline</h2>
+						<aside class="notes">
+							Chiffres clé : date de démarrage, grandes étapes (proto, MVP), etc...
+						</aside>
+					</section>
+					<section>sub-section 1</section>
+					<section>sub-section 2</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>*aaS first</h2>
+						<aside class="notes">
+							Philosophie : SaaS/PaaS
+							Clever, Mailgun, Mailchimp, Prismic, Auth0, Github, Slack, Google Apps.
+							(ElasticCloud, Redislabs, Trello)
+						</aside>
+					</section>
+					<section>sub-section 1</section>
+					<section>sub-section 2</section>
+				</section>
+
+				<section>
+					<section>
 						<h2>Agilité @ SoUse</h2>
 						<aside class="notes">
-							Speaker notes...
+							La théorie c'est bien mais pas top
+							Adaptez/Créez la méthodo qui vous convient.
+							SoUse : kanban + CI/CD
 						</aside>
 					</section>
 					<section>sub-section 1</section>
@@ -71,7 +97,10 @@
 					<section>
 						<h2>SPA &amp; SEO</h2>
 						<aside class="notes">
-							Speaker notes...
+							SEO + SPA sur les pages statiques = mauvaise idée (la team, aide, à propos, partenaires, etc ...)
+							(meta dynamiques via du JS, pas évident pour les crawlers)
+							Et aussi : "protéger" les APIs pour rendre le scraping plus compliqué. (commit strip)
+							(solution "hybride" ad-hoc)
 						</aside>
 					</section>
 					<section>sub-section 1</section>
@@ -82,7 +111,11 @@
 					<section>
 						<h2>Chatbot</h2>
 						<aside class="notes">
-							Speaker notes...
+							Solution ad-hoc : lucene, dictionnaires, regexp
+							en // : étude de solutions de ML (classification avec tensorflow)
+							on récolte scrupuleusement les métriques liées à notre chatbot (phrases non comprises par ex.)
+							plus largement : il faut tout mesurer pour ne pas naviguer à vue
+							en cours : chatbot messanger (qui utilise notre bot)
 						</aside>
 					</section>
 					<section>sub-section 1</section>
@@ -93,7 +126,12 @@
 					<section>
 						<h2>Architecture</h2>
 						<aside class="notes">
-							Speaker notes...
+							Microservices (ne pas trop découper : théoriquement on en a 8, techniquement il n'y en a que 5) (revoir les chiffres)
+							Microservice => la bonne techno pour le bon usage (Play + node)
+							Choix structurant : pas de "socle technique" commun aux microservices d'une même techno
+							(ca fait du code dupliqué parfois certes, mais c'est assumé, on privilégie de limiter l'adhérence et l'isolation)
+							Zoom sur deux points de notre archi.
+							C'est structurant, à prendre en compte dès le départ (on l'a fait lors de la refonte Monolithe -> Microservice)
 						</aside>
 					</section>
 					<section>Multi-tenant</section>
@@ -104,7 +142,8 @@
 					<section>
 						<h2>Remote working</h2>
 						<aside class="notes">
-							Speaker notes...
+							Pas à 100%. Sinon c'est compliqué.
+							Il faut se voir de temps en temps, mais pas forcément tjs au même endroit :-)
 						</aside>
 					</section>
 					<section>sub-section 1</section>
@@ -115,7 +154,11 @@
 					<section>
 						<h2>Intégration d'API</h2>
 						<aside class="notes">
-							Speaker notes...
+							On a tout vu lol :-)
+							Des trucs bien et moins bien.
+							Trucs chiants : la restriction par IP, les APIs générées automatiquement par des plugins (WP), SOAP, OAuth1,
+							les docs pas à jour, les changements impromptus (payloads, url).
+							Enjeu = Monitoring du hub (détection des erreurs, gestion des quotas, etc ...)
 						</aside>
 					</section>
 					<section>sub-section 1</section>
@@ -126,7 +169,23 @@
 					<section>
 						<h2>Feature Team</h2>
 						<aside class="notes">
-							Speaker notes...
+							Présenter la team.
+							Zoom sur :
+							- le taf avec Jérôme
+							- les développeurs mobile ;-)
+							- les dashboards custom pour la Blabla Manager et le CEO
+							Parler du flow Github : issues, projects, PR.
+						</aside>
+					</section>
+					<section>sub-section 1</section>
+					<section>sub-section 2</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>Tests utilisateurs</h2>
+						<aside class="notes">
+							Testapic
 						</aside>
 					</section>
 					<section>sub-section 1</section>
@@ -137,7 +196,8 @@
 					<section>
 						<h2>Applis mobiles</h2>
 						<aside class="notes">
-							Speaker notes...
+							Story Mapping => on jette tout et on recommence (SoSnap)
+							On aurait du commencer par la lol
 						</aside>
 					</section>
 					<section>sub-section 1</section>
@@ -159,7 +219,10 @@
 					<section>
 						<h2>De Java à Scala</h2>
 						<aside class="notes">
-							Speaker notes...
+							Plutôt de SpringBoot à Play :-)
+							Cool features de Play : Async by design, routes, templating, globalement moins de magie, API Json, WS client
+							==> Productivité ++, DX ++
+							Cool features de Scala : case class, pattern matching, futures, functional programming, string interpolation
 						</aside>
 					</section>
 					<section>sub-section 1</section>
@@ -170,7 +233,11 @@
 					<section>
 						<h2>React at scale</h2>
 						<aside class="notes">
-							Speaker notes...
+							Cool : maquette statique -> React c'est simple.
+							Un vrai sujet : définir la bonne hiérarchie / granularité / généricité de composants
+							Un autre sujet : les perfs ! (google map). A un moment donné vous aurez besoin d'allez trifouiller dans le shouldComponentUpdate() ;-)
+							Attentions aux libs dont on dépend.
+							Redux (qu'on n'avait pas au début) sur le front, mais pas sur les BO (pas besoin)
 						</aside>
 					</section>
 					<section>sub-section 1</section>
