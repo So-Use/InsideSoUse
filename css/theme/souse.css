@@ -4,6 +4,11 @@ section.has-light-background, section.has-light-background h1, section.has-light
 p.hashtags {
   color: #f5b5d2; }
 
+img.avatar {
+  width: 15%;
+  height: 15%;
+}
+
 /*********************************************
  * GLOBAL STYLES
  *********************************************/
