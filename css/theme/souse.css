@@ -4,10 +4,13 @@ section.has-light-background, section.has-light-background h1, section.has-light
 p.hashtags {
   color: #f5b5d2; }
 
-img.avatar {
-  width: 15%;
-  height: 15%;
-}
+p.baseline {
+  font-size: 2em;
+  font-weight: bold; }
+
+img.partner {
+  width: 120px;
+  margin: 0px 16px !important; }
 
 /*********************************************
  * GLOBAL STYLES

@@ -39,5 +39,15 @@ p.hashtags {
 	color: $lightPink;
 }
 
+p.baseline {
+	font-size: 2em;
+	font-weight: bold;
+}
+
+img.partner {
+	width: 120px;
+	margin: 0px 16px !important;
+}
+
 // Theme template
 @import "../template/theme";
