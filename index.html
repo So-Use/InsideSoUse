@@ -388,12 +388,6 @@
 						<h1>SPA or not SPA ?</h1>
 						<aside class="notes">
 							BY : Mat
-							<ul>
-								<li>SEO + SPA sur les pages statiques = mauvaise idée (la team, aide, à propos, partenaires, etc ...)</li>
-								<li>meta dynamiques via du JS, pas évident pour les crawlers</li>
-							Et aussi :
-							(solution "hybride" ad-hoc)
-							</ul>
 						</aside>
 					</section>
 					<section>
@@ -405,6 +399,7 @@
 							<ul>
 								<li>SEO + SPA sur les pages statiques = mauvaise idée (la team, aide, à propos, partenaires, etc ...)</li>
 								<li>meta dynamiques via du JS, pas évident pour les crawlers</li>
+								<li>(solution "hybride" ad-hoc)</li>
 								<li>il y a du mieux https://www.stephanboyer.com/post/122/does-google-execute-javascript</li>
 							</ul>
 						</aside>
@@ -502,24 +497,38 @@
 						<p>
 							<img alt="microservices" src="img/microservices.gif" />
 						</p>
+						<aside class="notes">
+							Microservices (ne pas trop découper : théoriquement on en a 8, techniquement il n'y en a que 5) (revoir les chiffres)
+						</aside>
 					</section>
 					<section>
 						<h2>La bonne techno pour le bon usage</h2>
 						<p>
 							<img alt="bon-outil" src="img/bon-outil.gif" />
 						</p>
+						<aside class="notes">
+							 la bonne techno pour le bon usage (Play + node)
+							 Choix structurant : pas de "socle technique" commun aux microservices d'une même techno
+ 							 (ca fait du code dupliqué parfois certes, mais c'est assumé, on privilégie de limiter l'adhérence et l'isolation)
+						</aside>
 					</section>
 					<section>
 						<h2>Multi-tenant</h2>
 						<p>
 							<img alt="multi-tenant" src="img/trump-clones.gif" />
 						</p>
+						<aside class="notes">
+							C'est structurant, à prendre en compte dès le départ (on l'a fait lors de la refonte Monolithe -> Microservice)
+						</aside>
 					</section>
 					<section>
 						<h2>Feature Flipping</h2>
 						<p>
 							<img alt="flipping" src="img/flipping.gif" />
 						</p>
+						<aside class="notes">
+							C'est structurant, à prendre en compte dès le départ (on l'a fait lors de la refonte Monolithe -> Microservice)
+						</aside>
 					</section>
 				</section>
 
@@ -859,7 +868,6 @@
 						<h2>De SpringBoot à Play!</h2>
 						<aside class="notes">
 							BY : Mat
-							Plutôt de SpringBoot à Play :-)
 						</aside>
 					</section>
 					<section>
