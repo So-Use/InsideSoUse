@@ -296,3 +296,39 @@ body {
   -webkit-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
   -moz-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
   transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985); }
+
+
+.reveal .random {
+  animation: rotation 0.8s linear;
+}
+
+@-webkit-keyframes rotation {
+		0% {
+				-webkit-transform: rotate(0deg);
+		}
+		24% {
+				-webkit-transform: rotate(359deg);
+		}
+    25% {
+				-webkit-transform: rotate(0deg);
+		}
+    49% {
+				-webkit-transform: rotate(359deg);
+		}
+    50% {
+				-webkit-transform: rotate(0deg);
+		}
+    74% {
+				-webkit-transform: rotate(359deg);
+		}
+    75% {
+				-webkit-transform: rotate(0deg);
+		}
+    100% {
+				-webkit-transform: rotate(359deg);
+		}
+}
+
+.hide {
+  display: none;
+}

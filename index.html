@@ -16,6 +16,7 @@
 
 		<link rel="shortcut icon" type="image/ico" href="img/favicon.ico">
 
+		<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 		<!-- Printing and PDF exports -->
 		<script>
 			var link = document.createElement( 'link' );
@@ -263,7 +264,7 @@
 				</section>
 
 				<section>
-					<section>
+					<section data-state="random">
 						<h1>*aaS first</h1>
 						<aside class="notes">
 							BY : Mat
@@ -322,7 +323,7 @@
 				</section>
 
 				<section>
-					<section>
+					<section data-state="random">
 						<h1>Agilité @ SoUse</h1>
 						<img alt="Agilité @ SoUse" src="img/agility.gif"/>
 						<aside class="notes">
@@ -392,7 +393,7 @@
 				</section>
 
 				<section>
-					<section>
+					<section data-state="random">
 						<h1>SPA or not SPA ?</h1>
 						<aside class="notes">
 							BY : Mat
@@ -428,7 +429,7 @@
 				</section>
 
 				<section>
-					<section>
+					<section data-state="random">
 						<h1>Chatbot</h1>
 						<img alt="chatbot" src="img/chatbot.png" />
 						<aside class="notes">
@@ -494,7 +495,7 @@
 				</section>
 
 				<section>
-					<section>
+					<section data-state="random">
 						<h1>Architecture</h1>
 						<aside class="notes">
 							BY : Mat
@@ -547,7 +548,7 @@
 				</section>
 
 				<section>
-					<section>
+					<section data-state="random">
 						<h1>Intégration d'API</h1>
 						<aside class="notes">
 							BY : Gui
@@ -617,7 +618,7 @@
 				</section>
 
 				<section>
-					<section>
+					<section data-state="random">
 						<h1>Feature Team</h1>
 						<aside class="notes">
 							BY : Seb
@@ -709,7 +710,7 @@
 				</section>
 
 				<section>
-					<section>
+					<section data-state="random">
 						<h1>UX-UI</h1>
 						<aside class="notes">
 							BY : Gui
@@ -792,7 +793,7 @@
 				</section>
 
 				<section>
-					<section>
+					<section data-state="random">
 						<h1>Applis mobiles</h1>
 						<aside class="notes">
 							BY : Gui + Mat
@@ -836,7 +837,7 @@
 				</section>
 
 				<section>
-					<section>
+					<section data-state="random">
 						<h1>DevOps</h1>
 						<aside class="notes">
 							BY : Seb
@@ -877,7 +878,7 @@
 				</section>
 
 				<section>
-					<section>
+					<section data-state="random">
 						<h1>De Java à Scala</h1>
 						<h2>De SpringBoot à Play!</h2>
 						<aside class="notes">
@@ -922,7 +923,7 @@
 				</section>
 
 				<section>
-					<section>
+					<section data-state="random">
 						<h1>React at scale</h1>
 						<aside class="notes">
 							BY : Gui
@@ -1004,6 +1005,37 @@
 					{ src: 'plugin/notes/notes.js', async: true },
 					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
 				]
+			});
+			Reveal.addEventListener('random', function(e, a, b) {
+				setTimeout(function() {
+					var current = $(Reveal.getCurrentSlide());
+					var title = current.find('h1').html();
+					var titles = [];
+					$('h1').map(function(i, it) {
+						titles.push(it.innerHTML);
+					});
+					var size = titles.length;
+					// console.log(title, titles);
+			    current.addClass('random');
+					current.find('img').addClass('hide');
+
+					function nextTitle() {
+						var t = titles.pop();
+						if (t) {
+							current.find('h1').html(t);
+							setTimeout(nextTitle, 800 / size)
+						} else {
+							current.find('h1').html(title);
+						}
+					}
+
+					nextTitle();
+
+					setTimeout(function() {
+						current.removeClass('random');
+						current.find('img').removeClass('hide');
+					}, 800);
+				})
 			});
 		</script>
 	</body>
