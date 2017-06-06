@@ -16,7 +16,6 @@
 
 		<link rel="shortcut icon" type="image/ico" href="img/favicon.ico">
 
-		<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 		<!-- Printing and PDF exports -->
 		<script>
 			var link = document.createElement( 'link' );
@@ -991,6 +990,7 @@
 		</div>
 
 		<script src="lib/js/head.min.js"></script>
+		<script src="js/jquery.js"></script>
 		<script src="js/reveal.js"></script>
 
 		<script>
@@ -1006,6 +1006,20 @@
 					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
 				]
 			});
+
+			function shuffle(array) {
+			  var i = 0
+			    , j = 0
+			    , temp = null
+
+			  for (i = array.length - 1; i > 0; i -= 1) {
+			    j = Math.floor(Math.random() * (i + 1))
+			    temp = array[i]
+			    array[i] = array[j]
+			    array[j] = temp
+			  }
+			}
+
 			Reveal.addEventListener('random', function(e, a, b) {
 				setTimeout(function() {
 					var current = $(Reveal.getCurrentSlide());
@@ -1014,6 +1028,8 @@
 					$('h1').map(function(i, it) {
 						titles.push(it.innerHTML);
 					});
+					shuffle(titles);
+					console.log(titles);
 					var size = titles.length;
 					// console.log(title, titles);
 			    current.addClass('random');
